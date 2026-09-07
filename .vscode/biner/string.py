@@ -63,3 +63,44 @@ print("'"+tengah+"'")
 
 kanan = kanan.strip()
 print("'"+kanan+"'")
+
+# format string
+# contoh generic
+nama = "marlene"
+format_str = f"hello {nama}"
+print(format_str)
+
+# angka
+angka = 2007.2
+format_str = f"angka = {angka}"
+print(format_str)
+
+bool = True
+format_str = f"bool = {bool}"
+print(format_str)
+
+angka = 20070000
+format_str = f"angka = {angka:,}"
+print(format_str)
+
+# bilangan desimal
+angka = 2007.1232
+format_str = f"angka = {angka:.2f}"
+print(format_str)
+
+angka = 2007.1232
+format_str = f"angka = {angka:010.2f}"
+print(format_str)
+
+# menampilkan + atau -
+angkaminus = -10
+angkaplus = +10.1929
+format_minus = f"angka = {angkaminus:+d}"
+format_plus = f"angka = {angkaplus:+.2f}"
+print(format_minus)
+print(format_plus)
+
+#format persen
+persentase = 0.046
+format_persen = f"persen {persentase:.2%}"
+print(format_persen)
