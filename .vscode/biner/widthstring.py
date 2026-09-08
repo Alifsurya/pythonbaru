@@ -19,3 +19,34 @@ berat               = {berat:>5}
 """
 print(5*"="+ "DATA DIRI" + 5*"=")
 print(data_diri1)
+
+import datetime as dt
+hari_ini = dt.date.today()
+print(f"hari ini adalah {hari_ini:%a}")
+tanggal = dt.date(2026, 9, 7)
+print("Tanggal sekarang adalah", tanggal)
+print(f"hari ini adalah {tanggal:%A}")
+
+print(5*"-" + "Silahkan Masukkan tanggal lahir anda" + 5*"-")
+tanggal = int(input("Masukkan tanggal lahir\t"))
+bulan = int(input("Masukkan bulan lahir\t"))
+tahun = int(input("Masukkan tahun lahir\t"))
+tanggal_lahir = dt.date(tahun, bulan, tanggal)
+print(f"Tanggal kamu lahir adalah {tanggal_lahir}")
+print(f"Hari kamu lahir adalah {tanggal_lahir:%A}")
+
+hari_ini = dt.date.today()
+umur = hari_ini - tanggal_lahir
+umur_tahun = umur.days // 365
+print(f"Umur anda sekarang adalah {umur_tahun} tahun")
+
+print (10*"="+" Data Lahir "+"="*10)
+tanggal=int (input("tanggal lahir \t: "))
+bulan=int (input("bulan lahir \t: "))
+tahun=int (input("tahun lahir \t: "))
+tanggal_lahir= dt.datetime(tahun,bulan,tanggal)
+print (f"tanggal Lahir adalah {tanggal_lahir}")
+print (f"hari Lahir adalah  {tanggal_lahir:%A}")
+umur = hari_ini.year - tanggal_lahir.year
+bulan_lahir = hari_ini.month - tanggal_lahir.month
+print (f"Umur anda adalah {umur} tahun, {bulan_lahir} Bulan")
