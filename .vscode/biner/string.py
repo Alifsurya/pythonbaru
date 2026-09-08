@@ -104,3 +104,19 @@ print(format_plus)
 persentase = 0.046
 format_persen = f"persen {persentase:.2%}"
 print(format_persen)
+
+# aritmatika dalam placeholder
+harga = 10000
+jumlah = 5
+format_arit = f"Harga Total {harga*jumlah}"
+print(format_arit)
+
+# format dengan angka lain
+angka = 1000
+format_bin = f"Angka dalam bentuk binary adalh {bin(angka)}"
+format_octal = f"Angka dalam bentuk octal adalh {oct(angka)}"
+format_hexa = f"Angka dalam bentuk hexa adalh {hex(angka)}"
+
+print(format_bin)
+print(format_octal)
+print(format_hexa)
