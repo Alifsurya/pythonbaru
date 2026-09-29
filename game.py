@@ -1,22 +1,37 @@
 import random
 
-pesan = "Selamat Datang di Game acak"
-position = random.randint(1, 4)
+welcome_message = "WELCOME TO CUYPY GAMES!"
+cuypy_position = random.randint(1, 4)
 
-print("*********************************")
-print(f"** {pesan} **")
-print("*********************************")
+print("*****************************")
+print(f"** {welcome_message} **")
+print("*****************************")
 
-user = input("Masukkan Nama Kamu: ")
+nama_user = input("masukan nama kamu: ")
+
+bentuk_goa = "|_|"
+goa_kosong = [bentuk_goa] * 4 # INI TETEP HARUS KOSONG
+
+goa = goa_kosong.copy() # INI ADALAH TEMPAT BARU UNTUK SI CUYPY
+goa[cuypy_position - 1] = "|0_0|"
+
 print(f'''
-halo {user}! Perhatikan goa dibawah ini
-|_| |_| |_| |_|
+Halo {nama_user}! Coba perhatikan goa dibawah ini  
+{goa_kosong}
 ''')
 
-pilihan = int(input("Menurut kamu di goa nomor berapa marmut berada? [1, 2, 3, 4]: "))
+pilihan_user = int(input("Menurut kamu di goa nomor berapa CUYPY berada? [1 / 2 / 3 / 4]: "))
 
-if pilihan == position:
-    print(f"Selamat {user} kamu menang! posisi marmut ada di nomor goa {position} dan pilihan kamu benar")
+confirm_answer = input(f"apakah kamu yakin jawabannya adalah {pilihan_user}? [y/n]: ")
+
+if confirm_answer == "n":
+    print("program dihentikan!")
+    exit()
+elif confirm_answer == "y":
+    if pilihan_user == cuypy_position:
+        print(f"\n{goa}\n\nSelamat Kamu Menang 🏆")
+    else:
+        print(f"\n{goa}\n\nUncchhh kamu kalah 🙊")
 else:
-    print(f"Kamu Kalah! marmut bukan berada disitu, tapi ada di goa nomor {position}. Sedangkan kamu memilih {pilihan}")
-    
+    print("Silahkan ulangi programnya!")
+    exit()
